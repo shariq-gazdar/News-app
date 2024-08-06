@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+/* Scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Roundness of the scrollbar thumb */
+  border: 3px solid transparent; /* Space around the scrollbar thumb */
+  background-clip: content-box; /* Ensure the thumb color is visible */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scrollbar thumb on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Roundness of the scrollbar track */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Scrollbar corner (for when both horizontal and vertical scrollbars are present) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* Color of the scrollbar corner */
 }
