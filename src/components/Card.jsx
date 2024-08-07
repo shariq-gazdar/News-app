@@ -2,6 +2,7 @@
 import "../App.css";
 import { Button } from "flowbite-react";
 import Dummy from "./media/dummy.png";
+
 export function NewsCard(props) {
   {
     var image = props.image;
@@ -9,15 +10,20 @@ export function NewsCard(props) {
       image = Dummy;
     }
   }
+
+  const handleRedirect = () => {
+    window.open(props.url, "_blank");
+  };
+
   return (
     <div className="flex flex-col dark:bg-gray-800 max-w-72">
       <img src={image} alt="No Image Loaded!" />
       <div className="content flex flex-col px-6 min-w-36 ">
-        <h1 className="title font-bold text-3xl dark:text-white  ">
+        <h1 className="title font-bold text-3xl max-h-28 dark:text-white overflow-hidden mt-2">
           {props.title}
         </h1>
-        <p>{props.description}</p>
-        <Button className="my-6">
+        <p className="dark:text-white">{props.description}</p>
+        <Button className="my-6" onClick={handleRedirect}>
           Read more
           <svg
             className="-mr-1 ml-2 h-4 w-4"

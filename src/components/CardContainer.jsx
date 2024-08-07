@@ -38,6 +38,7 @@ function CardContainer() {
           title={value.title}
           description={value.description}
           image={value.urlToImage}
+          url={value.url}
         />
       ))}
     </div>
