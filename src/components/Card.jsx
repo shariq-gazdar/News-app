@@ -6,8 +6,12 @@ import Dummy from "./media/dummy.png";
 export function NewsCard(props) {
   {
     var image = props.image;
-    if (image == null) {
+    var description = props.description;
+    if (image == "None") {
       image = Dummy;
+    }
+    if (description == "") {
+      description = "No description for this one!";
     }
   }
 
@@ -17,12 +21,14 @@ export function NewsCard(props) {
 
   return (
     <div className="flex flex-col dark:bg-gray-800 max-w-72">
-      <img src={image} alt="No Image Loaded!" />
+      <img src={image} alt="No Loaded!" className="h-64 object-cover" />
       <div className="content flex flex-col px-6 min-w-36 ">
         <h1 className="title font-bold text-3xl max-h-28 dark:text-white overflow-hidden mt-2">
           {props.title}
         </h1>
-        <p className="dark:text-white">{props.description}</p>
+        <p className="dark:text-white min-h-20 max-h-20 overflow-hidden">
+          {description}
+        </p>
         <Button className="my-6" onClick={handleRedirect}>
           Read more
           <svg

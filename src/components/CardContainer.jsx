@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NewsCard } from "./Card";
-
 function CardContainer() {
-  const baseUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=0a4ece348d504c7c9f16781fb19c222b`;
+  const baseUrl = process.env.REACT_APP_API_LINK;
 
   const [articles, setArticles] = useState([]);
 
@@ -10,13 +9,14 @@ function CardContainer() {
     try {
       let result = await fetch(baseUrl);
       result = await result.json();
+      console.log(result);
 
-      if (result.articles) {
-        let articleNumber = result.articles.length;
+      if (result.news) {
+        let articleNumber = result.news.length;
         let articlesArray = [];
 
         for (let index = 0; index < articleNumber; index++) {
-          articlesArray.push(result.articles[index]);
+          articlesArray.push(result.news[index]);
         }
 
         setArticles(articlesArray);
@@ -37,7 +37,7 @@ function CardContainer() {
           key={index}
           title={value.title}
           description={value.description}
-          image={value.urlToImage}
+          image={value.image}
           url={value.url}
         />
       ))}
