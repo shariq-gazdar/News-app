@@ -4,17 +4,14 @@ import { Button } from "flowbite-react";
 import Dummy from "./media/dummy.png";
 
 export function NewsCard(props) {
-  {
-    var image = props.image;
-    var description = props.description;
-    if (image == "None") {
-      image = Dummy;
-    }
-    if (description == "") {
-      description = "No description for this one!";
-    }
+  let image = props.image;
+  let description = props.description;
+  if (image === "None") {
+    image = Dummy;
   }
-
+  if (description === "") {
+    description = "No description for this one!";
+  }
   const handleRedirect = () => {
     window.open(props.url, "_blank");
   };
