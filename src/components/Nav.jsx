@@ -8,7 +8,7 @@ export function NavComponent() {
       <Navbar.Brand href="https://flowbite-react.com">
         <img src={NewsLogo} className="mr-3 w-16 " alt="Flowbite React Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite React
+          Shariq's News
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">

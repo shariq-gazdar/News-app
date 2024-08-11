@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NewsCard } from "./Card";
-function CardContainer() {
+function CardContainer(props) {
   const baseUrl = process.env.REACT_APP_API_LINK;
-
   const [articles, setArticles] = useState([]);
-
   async function updateCards() {
+    console.log(props.searchTerm);
     try {
       let result = await fetch(baseUrl);
       result = await result.json();

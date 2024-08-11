@@ -9,6 +9,7 @@ function App() {
   const handleSearchTerm = (term) => {
     setSearchTerm(term);
   };
+  console.log(searchTerm);
   return (
     <div className="App dark:bg-slate-700">
       <NavComponent />

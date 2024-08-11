@@ -26,10 +26,7 @@ function HeadAndSearch({ onSearch }) {
           className="w-96"
           onChange={handleSearchChange}
         />
-        <button
-          className="absolute left-80 top-2 pl-5"
-          onClick={handleSearchClick}
-        >
+        <button className="absolute left-80 top-2 " onClick={handleSearchClick}>
           <img src={searchIcon} alt="Search" />
         </button>
       </div>
