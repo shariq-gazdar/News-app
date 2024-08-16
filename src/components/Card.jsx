@@ -20,7 +20,7 @@ export function NewsCard(props) {
     <div className="flex flex-col dark:bg-gray-800 max-w-72">
       <img src={image} alt="No Loaded!" className="h-64 object-cover" />
       <div className="content flex flex-col px-6 min-w-36 ">
-        <h1 className="title font-bold text-3xl max-h-28 dark:text-white overflow-hidden mt-2">
+        <h1 className="title font-bold text-3xl max-h-28 min-h-28 dark:text-white overflow-hidden mt-2">
           {props.title}
         </h1>
         <p className="dark:text-white min-h-20 max-h-20 overflow-hidden">

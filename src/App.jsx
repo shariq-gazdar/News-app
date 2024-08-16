@@ -11,7 +11,7 @@ function App() {
   };
   console.log(searchTerm);
   return (
-    <div className="App dark:bg-slate-700">
+    <div className="App dark:bg-slate-700 overflow-x-hidden">
       <NavComponent />
       <HeadAndSearch onSearch={handleSearchTerm} />
       <CardContainer searchTerm={searchTerm} />
