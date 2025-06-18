@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import { Button, TextInput } from "flowbite-react";
 import searchIcon from "./media/Svgs/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg";
 // https://api.currentsapi.services/v1/search?apiKey=viiwtif3yx0vLEbigMPE5TO3lRDPyMz1_3MGbYz4EtU6-hSA&category=world
-function HeadAndSearch({ onSearch }) {
+function HeadAndSearch({ onSearch, changeFunction }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+    setSearchTerm(e.target.innerText);
     handleSearchClick();
+    changeFunction(searchTerm);
   };
 
   const handleSearchClick = () => {
